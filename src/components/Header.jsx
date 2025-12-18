@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/logo.png'
 import { format } from 'date-fns';
 
-const Navbar = () => {
+const Header = () => {
     return (
         <div className='flex flex-col justify-center items-center '>
             <img className='w-100' src={logo} alt="" />
@@ -12,4 +12,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Header;

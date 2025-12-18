@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import Home from "../components/Navbar";
+import Home from "../components/Header";
 import HomeLayout from "../layouts/HomeLayout";
 
 

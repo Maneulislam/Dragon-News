@@ -1,11 +1,13 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Header from '../components/Header';
+import Latest from '../components/Latest';
 
 const HomeLayout = () => {
     return (
-        <div>
+        <div className='w-10/12 mx-auto'>
             <header>
-                <Navbar></Navbar>
+                <Header></Header>
+                <Latest></Latest>
             </header>
 
             <main>
