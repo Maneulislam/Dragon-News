@@ -22,3 +22,8 @@
     font-family: "Poppins", sans-serif;
 
 }
+
+
+.active {
+    @apply bg-base-300
+}

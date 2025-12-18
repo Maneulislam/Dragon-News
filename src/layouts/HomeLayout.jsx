@@ -2,6 +2,9 @@ import React from 'react';
 import Header from '../components/Header';
 import Latest from '../components/Latest';
 import Navbar from '../components/Navbar';
+import { Outlet } from 'react-router';
+import LeftAside from '../components/HomeLayouts/LeftAside';
+import RightAside from '../components/HomeLayouts/RightAside';
 
 const HomeLayout = () => {
     return (
@@ -12,11 +15,19 @@ const HomeLayout = () => {
                 <Navbar></Navbar>
             </header>
 
-            <main>
+            <main className='grid grid-cols-12 '>
 
-                <section className='left-sec'>Left</section>
-                <section className='main'>Main</section>
-                <section className='Right-sec'>Right</section>
+                <section className='col-span-3'>
+                    <LeftAside></LeftAside>
+                </section>
+
+                <section className='col-span-6'>
+                    <Outlet></Outlet>
+                </section>
+
+                <section className=' col-span-3'>
+                    <RightAside></RightAside>
+                </section>
 
             </main>
 
