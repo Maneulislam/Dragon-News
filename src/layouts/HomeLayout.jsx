@@ -17,15 +17,15 @@ const HomeLayout = () => {
 
             <main className='grid grid-cols-12 '>
 
-                <section className='col-span-3'>
+                <section className='col-span-2'>
                     <LeftAside></LeftAside>
                 </section>
 
-                <section className='col-span-6'>
+                <section className='col-span-8'>
                     <Outlet></Outlet>
                 </section>
 
-                <section className=' col-span-3'>
+                <section className=' col-span-2'>
                     <RightAside></RightAside>
                 </section>
 
