@@ -10,7 +10,7 @@ const Category = () => {
 
 
     return (
-        <div>
+        <div >
             <h3 className='font-bold'>All Category ({categories.length})</h3>
 
             <div className='mt-4'>

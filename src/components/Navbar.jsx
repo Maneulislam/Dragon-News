@@ -1,19 +1,19 @@
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import user from '../assets/user.png'
 
 const Navbar = () => {
 
     const links = <>
 
-        <li><NavLink className='text-accent' to='/'>Home</NavLink></li>
-        <li><NavLink className='text-accent' to='/about'>About</NavLink></li>
-        <li><NavLink className='text-accent' to='/career'>Career</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "active" : "text-accent"} to='/'>Home</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "active" : "text-accent"} to='/about'>About</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "active" : "text-accent"} to='/career'>Career</NavLink></li>
 
 
     </>
 
     return (
-        <div className="navbar bg-base-100 mb-10">
+        <div className="navbar bg-base-200 mb-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +42,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end space-x-4">
                 <img src={user} alt="" />
-                <a className="btn bg-primary px-9 text-white">Login</a>
+                <Link to='/auth/login' className="btn bg-primary px-9 text-white">Login</Link>
             </div>
         </div>
     );

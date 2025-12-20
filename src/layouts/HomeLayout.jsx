@@ -17,7 +17,7 @@ const HomeLayout = () => {
 
             <main className='grid grid-cols-12 '>
 
-                <section className='col-span-2'>
+                <section className='col-span-2 sticky top-0 h-fit'>
                     <LeftAside></LeftAside>
                 </section>
 
@@ -25,7 +25,7 @@ const HomeLayout = () => {
                     <Outlet></Outlet>
                 </section>
 
-                <section className=' col-span-2'>
+                <section className=' col-span-2 sticky top-0 h-fit'>
                     <RightAside></RightAside>
                 </section>
 

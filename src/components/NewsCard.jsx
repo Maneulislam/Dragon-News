@@ -12,6 +12,7 @@ const NewsCard = ({ news }) => {
 
     return (
         <div className="card bg-base-100 shadow-md rounded-lg">
+
             {/* Header */}
             <div className="flex items-center justify-between p-4 rounded-t-lg bg-base-200">
                 <div className="flex items-center gap-3">
@@ -44,8 +45,8 @@ const NewsCard = ({ news }) => {
                     />
                 </figure>
                 <p className="text-sm text-gray-600">
-                    {details.length > 180 ? details.slice(0, 180) + "..." : details}
-                    <button className="text-orange-400 font-semibold hover:underline">
+                    {details.length > 280 ? details.slice(0, 280) + "..." : details}
+                    <button className="text-orange-400 cursor-pointer text-lg font-semibold hover:underline">
                         Read More
                     </button>
 
