@@ -6,7 +6,7 @@ const AuthLayout = () => {
     return (
         <div className='bg-base-200'>
             <div className='w-10/12 mx-auto bg-base-200 min-h-screen'>
-                <header className='pt-10 bg-base-200'>
+                <header className='pt-8 bg-base-200'>
                     <Navbar></Navbar>
                 </header>
 
