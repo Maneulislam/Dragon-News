@@ -1,11 +1,13 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Register = () => {
 
-    const { createUser, setUser } = use(AuthContext);
+    const { createUser, setUser, updateUser } = use(AuthContext);
     console.log(setUser);
+
+    const navigate = useNavigate();
 
     const handleRegister = (event) => {
         event.preventDefault();
@@ -22,7 +24,24 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                setUser(result.user);
+                const user = result.user;
+
+                updateUser({ displayName: name, photoURL: photo })
+                    .then(result => {
+                        console.log(result);
+                        setUser({ ...user, displayName: name, photoURL: photo });
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        setUser(user)
+                    })
+
+                navigate('/')
+
+
+
+
+
             })
             .catch(error => {
                 console.log(error.message);

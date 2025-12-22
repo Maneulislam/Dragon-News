@@ -6,6 +6,7 @@ import { AuthContext } from '../provider/AuthProvider';
 const Navbar = () => {
 
     const { user, logOut } = use(AuthContext)
+    console.log(user);
 
 
 
@@ -53,7 +54,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end space-x-4">
                 <p>{user?.email}</p>
-                <img src={userIcon} alt="" />
+                <img src={`${user ? user.photoURL : userIcon}`} alt="" />
                 {user ? <button onClick={handleLogoutBtn} className="btn bg-primary px-9 text-white">Logout</button> :
                     <Link to='/auth/login' className="btn bg-primary px-9 text-white">Login</Link>}
             </div>
