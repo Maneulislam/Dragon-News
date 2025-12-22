@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div>
             <h3 className='font-bold'>Dragon News </h3>
-            {/* <Navigate to='/category/0'></Navigate> */}
+            <Navigate to='/category/0'></Navigate>
         </div>
     );
 };
