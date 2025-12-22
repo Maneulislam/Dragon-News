@@ -38,7 +38,7 @@ const CategoryNews = () => {
 
             <div className='grid grid-cols-1 gap-10'>
                 {
-                    categoryNews.map(news => <NewsCard news={news} key={news.id}></NewsCard>)
+                    categoryNews?.map(news => <NewsCard news={news} key={news.id}></NewsCard>)
 
                 }
             </div>
