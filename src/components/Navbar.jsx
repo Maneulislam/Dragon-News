@@ -6,7 +6,7 @@ import { AuthContext } from '../provider/AuthProvider';
 const Navbar = () => {
 
     const { user, logOut } = use(AuthContext)
-    console.log(user);
+    // console.log(user);
 
 
 
@@ -18,8 +18,7 @@ const Navbar = () => {
     const links = <>
 
         <li><NavLink className={({ isActive }) => isActive ? "active" : "text-accent"} to='/'>Home</NavLink></li>
-        <li><NavLink className={({ isActive }) => isActive ? "active" : "text-accent"} to='/about'>About</NavLink></li>
-        <li><NavLink className={({ isActive }) => isActive ? "active" : "text-accent"} to='/career'>Career</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? "active" : "text-accent"} to='/auth/register'>Register</NavLink></li>
 
 
     </>

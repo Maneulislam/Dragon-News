@@ -5,7 +5,7 @@ import { AuthContext } from '../provider/AuthProvider';
 const Register = () => {
 
     const { createUser, setUser, updateUser } = use(AuthContext);
-    console.log(setUser);
+    // console.log(setUser);
 
     const navigate = useNavigate();
 
@@ -19,20 +19,20 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(name, photo, email, password);
+        // console.log(name, photo, email, password);
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 const user = result.user;
 
                 updateUser({ displayName: name, photoURL: photo })
                     .then(result => {
-                        console.log(result);
+                        // console.log(result);
                         setUser({ ...user, displayName: name, photoURL: photo });
                     })
                     .catch(error => {
-                        console.log(error);
+                        // console.log(error);
                         setUser(user)
                     })
 
@@ -44,7 +44,7 @@ const Register = () => {
 
             })
             .catch(error => {
-                console.log(error.message);
+                // console.log(error.message);
                 setUser(error.message)
             })
 

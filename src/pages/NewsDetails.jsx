@@ -13,7 +13,7 @@ const NewsDetails = () => {
 
 
     useEffect(() => {
-        const newsDetails = data.find((singleData) => console.log(singleData.id, cleanId) || singleData.id == cleanId);
+        const newsDetails = data.find((singleData) => (singleData.id, cleanId) || singleData.id == cleanId);
         setNews(newsDetails)
 
     }, [data, cleanId]);
